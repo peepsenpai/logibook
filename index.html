@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logibook</title>
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/a16f8ee6e2.js" crossorigin="anonymous"></script>
+
+
+    <!-- bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- bootstrap js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header1">
+        <div class="header-iconns left-content">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram-square"></i>
+            <i class="fab fa-twitter-square"></i>
+        </div>
+
+        <div class="right-content">
+            <div class="my-account">
+                <div class="account">
+                    <span class="lang-acco-span"><i class="far fa-user"></i><select name="loginMenu" id="loginMenu">
+                        <option value="MyAccount">My account</option>
+                        <option value="Login">Log In</option>
+                        <option value="Signup">Sign Up</option>
+                    </select></span>
+                </div>
+
+
+
+                <!-- <div class="account">
+                    <span class="lang-acco-span"><i class="far fa-user"></i><a href="#">My account</a><i class="fas fa-chevron-down"></i></span>
+                </div> -->
+
+            </div>
+    </header>
+
+    <div class="header2">
+        <div class="h2-navbar">
+            <div class="header2-logo m-0 p-0">
+                <!-- <div class="logo-h">
+                    <img src="img/download.jfif" alt="">
+                </div> -->
+                <div class="header2-text">
+                    <img src="img/logo2.jpg">
+                </div>
+            </div>
+            <div class="bars">
+                <div class="bar-item">
+                    <div class="right-bars" id="right-bars1" onclick="openNav()"><i class="fas fa-bars"></i></div>
+                    <div class="left-bars" id="left-bar-2" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h2-item-box" id="h2-item-box">
+                <div class="h2-right-item" id="h2-right-item">
+                    <div class="right-content">
+                        <div class="right-nav">
+                            <div class="right-nav-item active">
+                                <a href="#home">Home</a>
+                            </div>
+                            <div class="right-nav-item">
+                                <a href="#features">Features</a>
+                            </div>
+                            <div class="right-nav-item">
+                                <a href="#pricing">Pricing</a>
+                            </div>
+                            <div class="right-nav-item">
+                                <a href="#faq">FAQ</a>
+                            </div>
+                            <div class="right-nav-item">
+                                <a href="#contact">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <span class="search-box">
+                            <i class="fas fa-search"></i> <button class="btns searchbtn"><i
+                                    class="fas fa-phone-alt"></i>
+                                +1 (514)312-5678</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- banner  -->
+    <section class="banner-area" id="home">
+        <div class="d-table container-fluid">
+            <div class="row">
+                <div class="banner-content col-lg-5 col-md-12 col-sm-12">
+                    <div class="banner-metro">
+                        <button>A shubh welcome to Logibook! :-}</button>
+                    </div>
+                    <div class="banner-tag">
+                        <p><i>Aapka apna digital khata!</i></p>
+                    </div>
+                    <div class="banner-heading mt-4 mb-3">
+                        <h1>Logibook streamlines genuine quality ERP services for the convenience of your company's road
+                            transport management services.</h1>
+                    </div>
+                    <div class="para mb-3">
+                        <p>Logibook makes bookings, operations, tracking and monitoring of goods convenient, that are to
+                            be delivered in real time. The platform helps operators in taking decisions by providing
+                            accurate data and generating reports on revenue while providing real life communication
+                            updates.
+                        </p>
+                    </div>
+                    <div class="button mt-2 mb-3">
+                        <!-- <button class="btns banner-button">
+                            Request quotes <i class="fas fa-caret-right"></i>
+                        </button> -->
+                        <button class="btns banner-button">
+                            <select id="request-quote" class="requet-quote">
+                                <option class="first-option" value="1">REQUEST QUOTE</option>
+                                <option value="2">Enter pickup point :</option>
+                                <option value="3">Enter drop point :</option>
+                                <option value="4">Select transport type:</option>
+                                <option value="5">Select ERP plan:</option>
+                            </select>
+                        </button>
+                    </div>
+                </div>
+                <div class="shape col-lg-7 col-md-12 col-sm-12">
+                    <!-- <img src="img/truck-nawpic-3.jpg" class="img-fluid"> -->
+                    <img src="img/aaaa.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about us  -->
+    <section class="about pb-3">
+        <div class="about-items">
+            <div class="container">
+                <div class="row">
+                    <div class="about-box col-lg-6 col-md-12 col-sm-12">
+                        <div class="about-heading">
+                            <h1>Logibook gives you a detailed digital log book for your road transportation logistics
+                                and its simple to navigate through it.</h1>
+                        </div>
+                        <div class="about-para mt-4">
+                            <p>We provide a software solution in road transport logistics to streamline operations and
+                                accounts, resulting in greater productivity, more net profits and ease of doing work. We
+                                are a customer-centric firm using the right blend of people, technology, infrastructure
+                                and expertise to provide you with prompt and secure logistics service.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-year col-lg-6 col-md-12 col-sm-12">
+                        <div class="about-yr-box">
+                            <div class="thirty">
+                                <h1>30</h1>
+                            </div>
+                            <div class="yr-para">
+                                <p>Year’s of experience in transport and logistics services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- features  -->
+    <section class="features pt-5 pb-4" id="features">
+        <div class="features-content container">
+            <div class="row">
+                <div class="feat-right-part col-lg-6 col-md-12 col-sm-12">
+                    <div class="feat-right-items">
+                        <div class="header-items">
+                            <span class="all-sma-heading">Logistics solution</span>
+                            <h2 class="mt-3 mb-4 all-lar-heading">Features</h2>
+                        </div>
+                        <div class="feat-box">
+                            <div class="feat-s-box">
+                                <div class="feat-logo">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="faet-box-item">
+                                    <h3>Record Transport trips</h3>
+                                    <p>Add origin, destination, trip freight, expenses and payments. Create and share
+                                        Biltys and invoices.</p>
+                                </div>
+                            </div>
+                            <div class="feat-s-box">
+                                <div class="feat-logo">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div class="faet-box-item">
+                                    <h3>Manage your Transport</h3>
+                                    <p>Track diesel, FASTag and repair expenses. Check monthly profit and loss.</p>
+                                </div>
+                            </div>
+                            <div class="feat-s-box">
+                                <div class="feat-logo">
+                                    <i class="fas fa-record-vinyl"></i>
+                                </div>
+                                <div class="faet-box-item">
+                                    <h3>Maintain Party Ledger</h3>
+                                    <p>Party ledger automatically updated. Share ledger and invoice with just a Click.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feat-left-items col-lg-6 col-md-12 col-sm-12">
+                    <div class="feat-left-img">
+                        <div class="del-c">
+                            <img src="img/request-quote-img.jpg" alt="" class="img-fluid">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services  -->
+    <section class="services pt-4 pb-4" id="services">
+        <div class="service-container">
+            <div class="service-title">
+                <span class="all-sma-heading">Transport Services</span>
+                <h2 class="mt-3 mb-4 all-lar-heading">Features</h2>
+            </div>
+            <div class="service-content">
+                <div class="request-box">
+                    <div class="services-box">
+                        <a href="#">
+                            <img src="img/services-1.jpg" class="img-fluid">
+                        </a>
+                        <h3 class="m-0 p-3">
+                            <a href="#">
+                                Transparent Pricing
+                            </a>
+                        </h3>
+                        <p>With our fare calculator, we instantaneously give you the best possible rates online...</p>
+
+                        <button class="service-btn">
+                            Read more <span><i class="fas fa-plus-circle"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="request-box">
+                    <div class="services-box">
+                        <a href="#">
+                            <img src="img/services-2.jpg" class="img-fluid">
+                        </a>
+                        <h3 class="m-0 p-3">
+                            <a href="#">
+                                Live Tracking
+                            </a>
+                        </h3>
+                        <p>Get real time updates of your goods with our simplified technology. Automatic balance
+                            updates...</p>
+                        <button class="service-btn">
+                            Read more <span><i class="fas fa-plus-circle"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="request-box">
+                    <div class="services-box">
+                        <a href="#">
+                            <img src="img/services-3.jpg" class="img-fluid">
+                        </a>
+                        <h3 class="m-0 p-3">
+                            <a href="#">
+                                Quick and Easy Portal
+                            </a>
+                        </h3>
+                        <p>Our ERP software is very simple to use, giving instant results. No complications at all....
+                        </p>
+                        <button class="service-btn">
+                            Read more <span><i class="fas fa-plus-circle"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="request-box">
+                    <div class="services-box">
+                        <a href="#">
+                            <img src="img/services-4.jpg" class="img-fluid">
+                        </a>
+                        <h3 class="m-0 p-3">
+                            <a href="#">
+                                Special Features
+                            </a>
+                        </h3>
+                        <p>Make Bilty and Trip invoices in 30 seconds. Access POD status and ledger.Payments are
+                            instant...</p>
+                        <button class="service-btn m-0">
+                            Read more <span><i class="fas fa-plus-circle"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pricing  -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <div class="pricing-title pb-4">
+                <span class="all-sma-heading">Best performance</span>
+                <h2 class="mt-3 mb-4 all-lar-heading">Choose your perfect plan</h2>
+            </div>
+            <div class="container">
+                <div class="pricing-boxs row">
+                    <div class="pricing-content col-lg-4 col-md-12 col-sm-12">
+                        <div class="pricing-item">
+                            <div class="p-title">
+                                <h3>SUPER</h3>
+                            </div>
+                            <div class="price-deatails">
+                                <div class="order-dpt">
+                                    Booking - Dispatch - Delivery
+                                </div>
+                            </div>
+                            <div class="order-list">
+                                <ul>
+                                    <li>
+                                        Truck Tracking
+                                    </li>
+                                    <li>
+                                        Truck Management
+                                    </li>
+                                    <li>
+                                        Driver Management
+                                    </li>
+                                    <li>
+                                        Invoice Billing
+                                    </li>
+                                    <li>
+                                        24/7 Customer Service
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-buttons">
+                                <button class="pricing-btn btns">&#x20B9; 12,000</button>
+                                <p>*inclusive of all taxes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-content col-lg-4 col-md-12 col-sm-12">
+                        <div class="pricing-item">
+                            <div class="p-title">
+                                <h3>SUPER FAST</h3>
+                            </div>
+                            <div class="price-deatails">
+                                <div class="order-dpt">
+                                    Booking - Dispatch - Delivery
+                                </div>
+                            </div>
+                            <div class="order-list">
+                                <ul>
+                                    <li>
+                                        Truck Tracking
+                                    </li>
+                                    <li>
+                                        Truck Management
+                                    </li>
+                                    <li>
+                                        Driver Management
+                                    </li>
+                                    <li>
+                                        Invoice Billing
+                                    </li>
+                                    <li>
+                                        24/7 Customer Service
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-buttons">
+                                <button class="pricing-btn btns">&#x20B9; 36,000</button>
+                                <p>*inclusive of all taxes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-content col-lg-4 col-md-12 col-sm-12">
+                        <div class="pricing-item">
+                            <div class="p-title">
+                                <h3>EXPRESS</h3>
+                            </div>
+                            <div class="price-deatails">
+                                <div class="order-dpt">
+                                    Booking - Dispatch - Delivery
+                                </div>
+                            </div>
+                            <div class="order-list">
+                                <ul>
+                                    <li>
+                                        Truck Tracking
+                                    </li>
+                                    <li>
+                                        Truck Management
+                                    </li>
+                                    <li>
+                                        Driver Management
+                                    </li>
+                                    <li>
+                                        Invoice Billing
+                                    </li>
+                                    <li>
+                                        24/7 Customer Service
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-buttons">
+                                <button class="pricing-btn btns">&#x20B9; 96,000</button>
+                                <p>*inclusive of all taxes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- asked question  -->
+    <section class="question pb-4 pt-5" id="faq">
+        <div class="qus-content">
+            <div class="qus-title pb-4">
+                <span class="all-sma-heading">queries resolved</span>
+                <h2 class="mt-3 mb-4 all-lar-heading">We bring clarity to your inquiry</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="right-qus col-lg-6 col-md-12 col-sm-12">
+                        <div class="qus-boxes active">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">What services do you offer ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">Transport Logistics require tracking shipment, monitoring drivers,
+                                    vehicles and updating clients. Logibook ERP’s innovative technology has developed a
+                                    Transport Management Software to support all truckload management operations. This
+                                    powerful software is trustworthy to users and is simple to use.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="qus-boxes">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">What are the 2 modes of Truck Transport ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">FTL (Full truck Load) and PTL/LTL (Part truck load/less than full truck load.) Classification is based on the volume of the products/goods on trucks. </p>
+                            </div>
+                        </div>
+                        <div class="qus-boxes">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">Process of Booking-Dispatch-Delivery ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">To register, you must enter pickup, drop, type of load plus shipment schedule. Various truck types are available in real time. The user is provided with a dedicated section to check past booking details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-qus col-lg-6 col-md-12 col-sm-12">
+                        <div class="qus-boxes">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">How do we track transport movement details ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">  The GPS provides truck, driver and load info details with real time location. You can check the movement of the truck, unloading details and hours of driver service.</p>
+                            </div>
+                        </div>
+                        <div class="qus-boxes">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">How do we know the condition of the trucks ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">The software keeps a track of all the health services a truck requires to function smoothly and alerts truck managers. It additionally takes care of truck usage for optimal utilization.</p>
+                            </div>
+                        </div>
+                        <div class="qus-boxes">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">Is there a database of the truck drivers ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">Our transport system maintains each driver’s detailed profile and past records, giving a clear picture of the driving habits of drivers. This helps you in choosing and assigning work to drivers.</p>
+                            </div>
+                        </div>
+                        <div class="qus-boxes">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">What features are present in Invoice Billing ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">The software generates Lorry receipts (LR’s) before unloadment and LR’s can be edited too, in case of any changes. Proof of delivery (POF) is uploaded with a money receipt. It further maintains a complete track record of payments.</p>
+                            </div>
+                        </div>
+                        <div class="qus-boxes">
+                            <div class="quehead">
+                                <div class="qus-head-item">
+                                    <p class="m-0">Few reasons to choose Logibook services ?!</p>
+                                </div>
+                                <div class="qus-logo">
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="qus-para">
+                                <p class="m-0">Quality matters, Customized services, Better transportation rates, Clear ROI and sales, Least risk to goods policy, Multi-Level handlings in all aspects, Ease of payments, Detailed data and Analysis, Cloud based service, Modern technology, Simple to use software and customer-centric.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact  -->
+    <section class="contact pb-4 pt-4 mt-4 mb-4" id="contact">
+        <div class="cotact-us container">
+            <div class="row">
+                <div class="contact-left-para col-lg-6 col-md-12 col-sm-12">
+                    <div class="contact-img">
+                        <!-- <img src="img/request-quote-img.jpg" alt="" class="img-fluid"> -->
+                        <img src="img/1.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="contact-right-para col-lg-6 col-md-12 col-sm-12">
+                    <div class="header-items">
+                        <span class="all-sma-heading">Request a quote</span>
+                        <h2 class="mt-3 mb-4 all-lar-heading">Contact Us</h2>
+                    </div>
+                    <div class="row contact-w-box">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12 col-md-6">
+                                    <div class="contact-item">
+                                        <p class="m-0">Your Name</p>
+                                        <input type="text">
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="m-0">Phone</p>
+                                        <input type="text">
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="m-0">Freight type</p>
+                                        <select class="c-select">
+                                            <option value="1">Road freight</option>
+                                            <option value="2">Rail freight</option>
+                                            <option value="3">Ocean freight</option>
+                                            <option value="4">Air freight</option>
+                                        </select>
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="m-0">Delivery City</p>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 col-md-6">
+                                    <div class="contact-item">
+                                        <p class="m-0">Email address</p>
+                                        <input type="Email">
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="m-0">Subject</p>
+                                        <input type="text">
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="m-0">City of departure</p>
+                                        <input type="text">
+                                    </div>
+                                    <div class="contact-item">
+                                        <p class="m-0">Incoterms</p>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="contact-down">
+                                <div class="contact-item">
+                                    <p class="m-0">Weight</p>
+                                    <input type="text">
+                                </div>
+                                <div class="contact-item">
+                                    <p class="m-0">Width</p>
+                                    <input type="text">
+                                </div>
+                                <div class="contact-item">
+                                    <p class="m-0">Height</p>
+                                    <input type="text">
+                                </div>
+                                <div class="contact-item">
+                                    <p class="m-0">Size</p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="contact-radio">
+                                <div class="contact-r-box">
+                                    <input type="checkbox" name="fragle" id="fragle">
+                                    <label for="fragle">Fragle</label>
+                                </div>
+                                <div class="contact-r-box">
+                                    <input type="checkbox" name="Expressdelivery" id="Expressdelivery">
+                                    <label for="Expressdelivery">Express delivery</label>
+                                </div>
+                                <div class="contact-r-box">
+                                    <input type="checkbox" name="Insurance" id="Insurance">
+                                    <label for="Insurance">Insurance</label>
+                                </div>
+                                <div class="contact-r-box">
+                                    <input type="checkbox" name="Urgent" id="Urgent">
+                                    <label for="Urgent">Urgent</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="con-button">
+                            <p class="btns con-button m-0">
+                                Request a quotes <i class="fas fa-caret-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="partner">
+        <div class="partner-box">
+            <div class="part-item">
+                <img src="img/partner-1.png">
+            </div>
+            <div class="part-item">
+                <img src="img/partner-2.png" alt="">
+            </div>
+            <div class="part-item">
+                <img src="img/partner-3.png" alt="">
+            </div>
+            <div class="part-item">
+                <img src="img/partner-4.png" alt="">
+            </div>
+            <div class="part-item">
+                <img src="img/partner-5.png" alt="">
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer-row">
+                <div class="footer-box">
+                    <div class="footer-content">
+                        <a href="#" class="logo">
+                            <img src="img/logo2.jpg">
+                        </a>
+                        <p>We pride ourselves in providing you the best services in the form of a digital khata for all
+                            your transport logistics needs. Feel free to correspond with us!</p>
+                        <div class="social-icon">
+                            <div>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="fab fa-instagram-square"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <div class="footer-content">
+                        <h3>Get in touch</h3>
+                        <div class="address">
+                            <div class="div-addr">
+                                <span class="addr1"><i class="fas fa-map-marker-alt"></i></span>
+                                <span class="addre-span"> Address:</span>
+                                <a href="#"> 2976 Sunrise road las vegas, NV 89108</a>
+                            </div>
+                            <div class="div-addr">
+                                <span class="addr1"><i class="fas fa-phone-alt"></i></span>
+                                <span class="addre-span">Phone:</span>
+                                <a href="tel:+1-(514)-312-5678">+1 (514) 312-5678</a>
+                            </div>
+                            <div class="div-addr">
+                                <span class="addr1"><i class="fas fa-envelope"></i></span>
+                                <span class="addre-span">Email:</span>
+                                <a href="#"><span class="mail-box">xyz@gmail.com</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <div class="footer-content">
+                        <h3>Information</h3>
+                        <div class="f-link">
+                            <div class="f-link-item">
+                                <a href="#">Terms & Conditions</a>
+                            </div>
+                            <div class="f-link-item">
+                                <a href="#">Privacy Policy</a>
+                            </div>
+                            <div class="f-link-item">
+                                <a href="#">Request A Quote</a>
+                            </div>
+                            <div class="f-link-item">
+                                <a href="#">FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <div class="footer-content newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter and receive the latest tips via email.</p>
+                        <form class="newsletter-form" data-toggle="validator">
+                            <input type="email" class="form-control" placeholder="hello@logibook.in" name="EMAIL"
+                                required>
+                            <button class="subscribe" type="submit">
+                                Subscribe <span><i class="fas fa-arrow-right"></i></span>
+                            </button>
+                            <div id="validator-newsletter" class="f-result"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scrollBtn">
+        <a href="#home"><span><i class="fas fa-arrow-circle-up"></i></span></a>
+    </div>
+
+
+    <script>
+        function openNav() {
+            document.getElementById('h2-item-box').style.display = "block";
+            document.getElementById('right-bars1').style.display = "none"
+            document.getElementById('left-bar-2').style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById('h2-item-box').style.display = "none";
+            document.getElementById('right-bars1').style.display = "block"
+            document.getElementById('left-bar-2').style.display = "none";
+
+        }
+
+
+        // scroll to top function 
+        function scrollToTop() {
+            let scrollTopBtn = document.querySelector('#scrollBtn')
+            window.onscroll = function () {
+                let scroll = document.documentElement.scrollTop;
+                if (scroll >= 256) {
+                    scrollTopBtn.classList.add('active');
+                }
+                else {
+                    scrollTopBtn.classList.remove('active');
+                }
+            }
+        }
+        scrollToTop();
+
+
+        // active navlink 
+        const navLink = document.querySelectorAll('.right-nav-item');
+        function actionLink() {
+            navLink.forEach((n) => {
+                n.classList.remove('active')
+            });
+            this.classList.add('active')
+        };
+        navLink.forEach(n => n.addEventListener('click', actionLink))
+
+
+        // faq boxes 
+        const faqBoxes = document.querySelectorAll('.qus-boxes');
+        faqBoxes.forEach((faqItem) => {
+            const quesHead = faqItem.querySelector('.quehead');
+            quesHead.addEventListener('click', () => {
+                faqBoxes.forEach((faqItem2) => {
+                    if (faqItem !== faqItem2) {
+                        faqItem2.classList.remove('active')
+                    }
+                })
+                if (faqItem.classList.contains('active')) {
+                    faqItem.classList.remove('active')
+                }
+                else {
+                    faqItem.classList.add('active')
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
