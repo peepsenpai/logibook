@@ -130,18 +130,4 @@ go.addEventListener('click', () => {
     errorMsg.innerText = `' ${IV} ' is AVAILABLE! in this page`;
     errorMsg.style.cssText = `color: green;`;
 
-    for (let i = 0; i < wholeDocument.length; i += 1) {
-        let str = wholeDocument[i];
-        let MatchStr = str.match(regExp);
-        if (MatchStr) {
-            let newSpan = document.createElement('SPAN')
-            let splitStr = str.split(MatchStr[0])
-            newSpan.innerText = MatchStr[0]
-            newSpan.style.backgroundColor = 'green'
-            wholeDocument[i].innerHTML = ''
-            wholeDocument[i].append(splitStr[0])
-            wholeDocument[i].appendChild(newSpan)
-            wholeDocument[i].append(splitStr[1])
-        }
-    }
 })
