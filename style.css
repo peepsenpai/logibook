@@ -21,6 +21,86 @@ html{
     scroll-behavior: smooth;
 }
 
+mark{
+    background: orange;
+    color: black;
+}
+a:hover{
+    color: black;
+}
+
+/* pre loader  */
+#pre-loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(240, 222, 219);
+    transform: all 0.5s ease-out;
+    z-index: 1000;
+}
+#laoding-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #bd7303;
+    font-weight: bold;
+}
+.circle-loading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    border: 4px solid transparent;
+    border-top-color: #df5303 ;
+    border-bottom-color: #df5303 ;
+    border-radius: 50%;
+    animation: circleAnimation 2s linear;
+    animation-iteration-count: infinite;
+}
+.circle-loading::after, .circle-loading::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.circle-loading::after{
+  left: 15px;
+  top: 15px;
+  bottom: 15px;
+  right: 15px;
+  border: 4px solid transparent;
+  border-top-color: #df5303 ;
+  border-bottom-color: #df5303 ;
+  animation: circleAnimation 2s linear;
+  animation-iteration-count: infinite;
+}
+.circle-loading::before{
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  border: 3px solid transparent;
+  border-top-color: #df5303 ;
+  border-bottom-color: #df5303 ;
+  animation: circleAnimation 1s linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circleAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
 /* utilities */
 /* scroll top  */
 #scrollBtn{
@@ -244,7 +324,19 @@ html{
     color: rgb(122, 116, 116);
     margin-left: 15px;
 }
-.requet-quote{
+.banner-button a i{
+    padding-left: 8px;
+    font-size:18px;
+    position: relative;
+   top: 0.4vh;
+}
+.banner-button a{
+    color: white;
+}
+.banner-button a:hover{
+    color: black;
+}
+/* .requet-quote{
     background-color: transparent;
     border: none;
     outline: none;
@@ -255,7 +347,7 @@ html{
 .requet-quote option{
     color: rgb(27, 25, 25);
     font-weight: bold;
-}
+} */
 
 
 
@@ -542,12 +634,12 @@ html{
         padding-bottom: 15px;
     }
     .contact{
-        margin-left: 11rem;
+        margin-left: 12rem;
         margin-right: 4rem;
         padding:5rem 4.4rem;
     }
     .contact-img img{
-        height: 100vh;
+        height: 65vh;
     }
    .con-button{
        text-align: center;
@@ -587,8 +679,15 @@ html{
 
 /* footer  */
 .footer{
-    margin: 3rem 10rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 10px;
     padding:0 4.3rem;
+}
+.footer-content-box{
+    background-image: linear-gradient(to right top, #fcb4de, #fcd5dc, #ffe5db, #ffecd3, #fef4d3, #f9f6d3, #f4f7d4,
+     #eff9d6, #f4f4d0, #f8efcb, #fce7c1, #f1d1ac);
 }
 .footer-row{
     display: grid;
@@ -642,6 +741,8 @@ html{
     border: none;
     padding-bottom: 4px;
     border-bottom: 1px solid rgba(53, 51, 51,.6);
+    padding-left: 0;
+    margin-left: 0;
 }
 .subscribe{
     font-family: 'Barlow', sans-serif;
@@ -760,6 +861,7 @@ html{
 }
 .header2 .right-content{
     padding-bottom: 20px;
+    padding-left: 15px;
 }
 .search{
     padding-bottom: 10px;

@@ -1,3 +1,11 @@
+const preLoader = document.getElementById('pre-loader')
+function PageLoaded(){
+    setTimeout(function(){
+        preLoader.style.display = 'none';
+    },600)
+}
+
+
 
 function openNav() {
     document.getElementById('h2-item-box').style.display = "block";
@@ -124,10 +132,14 @@ go.addEventListener('click', () => {
     if (result === null) {
         errorMsg.innerText = ` ' ${IV} ' not in the Document`;
         errorMsg.style.cssText = `color: red;`;
-        return
+     return
     }
     
     errorMsg.innerText = `' ${IV} ' is AVAILABLE! in this page`;
     errorMsg.style.cssText = `color: green;`;
-
+    var Wdocs = document.body;
+    var creteNew = new Mark(Wdocs);
+    creteNew.markRegExp(regExp);
 })
+
+

@@ -22,9 +22,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
+        integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="vendor/mark.js/dist/mark.min.js" charset="UTF-8"></script> -->
 </head>
 
-<body>
+<body onload="PageLoaded()">
+    <!-- preloader  -->
+    <div id="pre-loader">
+        <div id="laoding-text">Loading...</div>
+        <div class="circle-loading"></div>
+    </div>
+
+
+    <!-- header 1  -->
     <header class="header1">
         <div class="header-iconns left-content">
             <i class="fab fa-facebook"></i>
@@ -134,10 +148,12 @@
                         </p>
                     </div>
                     <div class="button mt-2 mb-3">
-                        <!-- <button class="btns banner-button">
-                            Request quotes <i class="fas fa-caret-right"></i>
-                        </button> -->
                         <button class="btns banner-button">
+                            <a href="#">
+                                Request a quotes <i class="fas fa-caret-right"></i>
+                            </a>
+                        </button>
+                        <!-- <button class="btns banner-button">
                             <select id="request-quote" class="requet-quote">
                                 <option class="first-option" value="1">REQUEST QUOTE</option>
                                 <option value="2">Enter pickup point :</option>
@@ -145,7 +161,7 @@
                                 <option value="4">Select transport type:</option>
                                 <option value="5">Select ERP plan:</option>
                             </select>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="shape col-lg-7 col-md-12 col-sm-12">
@@ -266,9 +282,9 @@
                         <p>With our fare calculator, we instantaneously give you the best possible rates online...</p>
 
                         <button class="service-btn">
-                           <a href="/blog.html">
-                            Read more <span><i class="fas fa-plus-circle"></i></span>
-                           </a> 
+                            <a href="/blog.html">
+                                Read more <span><i class="fas fa-plus-circle"></i></span>
+                            </a>
                         </button>
                     </div>
                 </div>
@@ -606,7 +622,6 @@
             <div class="row">
                 <div class="contact-left-para col-lg-6 col-md-12 col-sm-12">
                     <div class="contact-img">
-                        <!-- <img src="img/request-quote-img.jpg" alt="" class="img-fluid"> -->
                         <img src="img/1.jpg" class="img-fluid">
                     </div>
                 </div>
@@ -628,7 +643,7 @@
                                             <p class="m-0">Phone</p>
                                             <input type="text" required>
                                         </div>
-                                        <div class="contact-item">
+                                        <!-- <div class="contact-item">
                                             <p class="m-0">Freight type</p>
                                             <select class="c-select">
                                                 <option value="1">Road freight</option>
@@ -636,11 +651,11 @@
                                                 <option value="3">Ocean freight</option>
                                                 <option value="4">Air freight</option>
                                             </select>
-                                        </div>
-                                        <div class="contact-item">
+                                        </div> -->
+                                        <!-- <div class="contact-item">
                                             <p class="m-0">Delivery City</p>
                                             <input type="text" required>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="col-lg-6 col-sm-12 col-md-6">
                                         <div class="contact-item">
@@ -651,18 +666,18 @@
                                             <p class="m-0">Subject</p>
                                             <input type="text" required>
                                         </div>
-                                        <div class="contact-item">
+                                        <!-- <div class="contact-item">
                                             <p class="m-0">City of departure</p>
                                             <input type="text" required>
                                         </div>
                                         <div class="contact-item">
                                             <p class="m-0">Incoterms</p>
                                             <input type="text" required>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12">
+                            <!-- <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="contact-down">
                                     <div class="contact-item">
                                         <p class="m-0">Weight</p>
@@ -699,7 +714,7 @@
                                         <label for="Urgent">Urgent</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="con-button">
                                 <a href="###">
                                     <p class="btns con-button m-0">
@@ -736,95 +751,98 @@
         </div>
     </section> -->
 
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="footer-row">
-                <div class="footer-box">
-                    <div class="footer-content">
-                        <a href="#" class="logo">
-                            <img src="img/logo2.jpg">
-                        </a>
-                        <p>We pride ourselves in providing you the best services in the form of a digital khata for all
-                            your transport logistics needs. Feel free to correspond with us!</p>
-                        <div class="social-icon">
-                            <div>
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="fab fa-instagram-square"></i>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://twitter.com/" target="_blank">
-                                    <i class="fab fa-twitter-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-box">
-                    <div class="footer-content">
-                        <h3>Get in touch</h3>
-                        <div class="address">
-                            <div class="div-addr">
-                                <span class="addr1"><i class="fas fa-map-marker-alt"></i></span>
-                                <span class="addre-span"> Address:</span>
-                                <a href="#"> 2976 Sunrise road las vegas, NV 89108</a>
-                            </div>
-                            <div class="div-addr">
-                                <span class="addr1"><i class="fas fa-phone-alt"></i></span>
-                                <span class="addre-span">Phone:</span>
-                                <a href="tel:+1-(514)-312-5678">+1 (514) 312-5678</a>
-                            </div>
-                            <div class="div-addr">
-                                <span class="addr1"><i class="fas fa-envelope"></i></span>
-                                <span class="addre-span">Email:</span>
-                                <a href="mailto:xyz@gmail.com"><span class="mail-box">xyz@gmail.com</span></a>
+    <footer class="footer-content-box">
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="footer-row">
+                    <div class="footer-box">
+                        <div class="footer-content">
+                            <a href="#" class="logo">
+                                <img src="img/logo2.jpg">
+                            </a>
+                            <p>We pride ourselves in providing you the best services in the form of a digital khata for
+                                all
+                                your transport logistics needs. Feel free to correspond with us!</p>
+                            <div class="social-icon">
+                                <div>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="fab fa-instagram-square"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://twitter.com/" target="_blank">
+                                        <i class="fab fa-twitter-square"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="footer-box">
-                    <div class="footer-content">
-                        <h3>Information</h3>
-                        <div class="f-link">
-                            <div class="f-link-item">
-                                <a href="/termAndCondition.html">Terms & Conditions</a>
-                            </div>
-                            <div class="f-link-item">
-                                <a href="/privacyPolicy.html">Privacy Policy</a>
-                            </div>
-                            <div class="f-link-item">
-                                <a href="#home">Request A Quote</a>
-                            </div>
-                            <div class="f-link-item">
-                                <a href="#faq">FAQ</a>
+                    <div class="footer-box">
+                        <div class="footer-content">
+                            <h3>Get in touch</h3>
+                            <div class="address">
+                                <div class="div-addr">
+                                    <span class="addr1"><i class="fas fa-map-marker-alt"></i></span>
+                                    <span class="addre-span"> Address:</span>
+                                    <a href="#"> 2976 Sunrise road las vegas, NV 89108</a>
+                                </div>
+                                <div class="div-addr">
+                                    <span class="addr1"><i class="fas fa-phone-alt"></i></span>
+                                    <span class="addre-span">Phone:</span>
+                                    <a href="tel:+1-(514)-312-5678">+1 (514) 312-5678</a>
+                                </div>
+                                <div class="div-addr">
+                                    <span class="addr1"><i class="fas fa-envelope"></i></span>
+                                    <span class="addre-span">Email:</span>
+                                    <a href="mailto:xyz@gmail.com"><span class="mail-box">xyz@gmail.com</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="footer-box">
-                    <div class="footer-content newsletter">
-                        <h3>Newsletter</h3>
-                        <p>Subscribe to our newsletter and receive the latest tips via email.</p>
-                        <form class="newsletter-form" data-toggle="validator">
-                            <input type="email" id="newletter-input" class="form-control"
-                                placeholder="hello@logibook.in" name="EMAIL" value="" required>
-                            <button class="subscribe" id="newsletter-subscribe-button" type="submit">
-                                Subscribe <span><i class="fas fa-arrow-right"></i></span>
-                            </button>
-                            <div id="validator-newsletter" class="f-result"></div>
-                        </form>
-                    </div>
-                    <div class="newletter-pop-up">
-                        <div class="newsletter-item">
-                            <div class="newsletter-close-button">
-                                <i class="fas fa-times"></i>
+                    <div class="footer-box">
+                        <div class="footer-content">
+                            <h3>Information</h3>
+                            <div class="f-link">
+                                <div class="f-link-item">
+                                    <a href="/termAndCondition.html">Terms & Conditions</a>
+                                </div>
+                                <div class="f-link-item">
+                                    <a href="/privacyPolicy.html">Privacy Policy</a>
+                                </div>
+                                <div class="f-link-item">
+                                    <a href="#home">Request A Quote</a>
+                                </div>
+                                <div class="f-link-item">
+                                    <a href="#faq">FAQ</a>
+                                </div>
                             </div>
-                            <p> You Successfully <strong>SUBSCRIBE</strong> our Newsletter</p>
+                        </div>
+                    </div>
+                    <div class="footer-box">
+                        <div class="footer-content newsletter">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to our newsletter and receive the latest tips via email.</p>
+                            <form class="newsletter-form" data-toggle="validator">
+                                <input type="email" id="newletter-input" class="form-control"
+                                    placeholder="hello@logibook.in" name="EMAIL" value="" required>
+                                <button class="subscribe" id="newsletter-subscribe-button" type="submit">
+                                    Subscribe <span><i class="fas fa-arrow-right"></i></span>
+                                </button>
+                                <div id="validator-newsletter" class="f-result"></div>
+                            </form>
+                        </div>
+                        <div class="newletter-pop-up">
+                            <div class="newsletter-item">
+                                <div class="newsletter-close-button">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <p> You Successfully <strong>SUBSCRIBE</strong> our Newsletter</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -836,8 +854,9 @@
         <a href="#home"><span><i class="fas fa-arrow-circle-up"></i></span></a>
     </div>
 
-<script src="script.js"></script>
-   
+    <!-- <script src="vendor/mark.js/dist/mark.min.js"></script> -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>
