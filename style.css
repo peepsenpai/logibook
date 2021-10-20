@@ -915,6 +915,9 @@ a:hover{
         margin: 1rem;
         padding: 0;
     }
+    .request-box{
+        padding-bottom: 15px;
+    }
 
     /* price  */
     .pricing{
@@ -973,6 +976,9 @@ a:hover{
     /* service  */
     .service-content{
         grid-template-columns: auto;
+    }
+    .request-box{
+        padding-bottom: 25px;
     }
 
     /* contact  */
