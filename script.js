@@ -1,24 +1,44 @@
 const preLoader = document.getElementById('pre-loader')
-function PageLoaded(){
-    setTimeout(function(){
-        preLoader.style.display = 'none';
-    },600)
+function PageLoaded() {
+    setTimeout(function () {
+        preLoader.style.opacity = '0';
+        preLoader.style.transition = '1.5s ease-in-out';
+        setTimeout(function () {
+            preLoader.style.display = 'none';
+        }, 1500)
+    }, 1500)
 }
 
+
+const rightBar1 = document.getElementById('right-bars1'),
+    hItemBox2 = document.getElementById('h2-item-box'),
+    leftBar2 = document.getElementById('left-bar-2');
 
 
 function openNav() {
-    document.getElementById('h2-item-box').style.display = "block";
-    document.getElementById('right-bars1').style.display = "none"
-    document.getElementById('left-bar-2').style.display = "block";
+    // hItemBox2.classList.remove('active')
+    hItemBox2.style.display = "block";
+    rightBar1.style.display = "none"
+    leftBar2.style.display = "block";
+
+    // console.log(rightBar1);
 }
 
 function closeNav() {
-    document.getElementById('h2-item-box').style.display = "none";
-    document.getElementById('right-bars1').style.display = "block"
-    document.getElementById('left-bar-2').style.display = "none";
-
+    hItemBox2.style.display = "none";
+    rightBar1.style.display = "block"
+    leftBar2.style.display = "none";
 }
+
+document.onclick = function (e) {
+    if (e.target.id !== 'faBars' && e.target.id !== 'h2-item-box' && window.innerWidth < 1100) {
+        hItemBox2.style.display = "none";
+        rightBar1.style.display = "block"
+        leftBar2.style.display = "none";
+    }
+}
+
+
 
 
 // scroll to top function 
@@ -84,23 +104,35 @@ newletterCloseBtn.addEventListener('click', () => {
 })
 
 
+// page scroller 
+window.sr = new ScrollReveal({ origin: 'top', duration: 2000, reset: true });
+
+sr.reveal('.banner-area', { distance: '200px', duration: 3000 })
+sr.reveal('.features', { distance: '100px' })
+sr.reveal('.service-container', { distance: '100px' })
+sr.reveal('.pricing', { distance: '100px', delay: 100 })
+sr.reveal('.question', { distance: '100px', origin: 'top' })
+// sr.reveal('.cotact-us',{distance: '100px', origin: 'top'})
+
+
+
 // search box 
-const searchIcon = document.getElementById('fa-search');
-const searchInput = document.getElementById('searchInput'),
-    callBtn = document.getElementById('searchbtn');
-searchIcon.addEventListener('click', () => {
+// const searchIcon = document.getElementById('fa-search');
+// const searchInput = document.getElementById('searchInput'),
+//     callBtn = document.getElementById('searchbtn');
+// searchIcon.addEventListener('click', () => {
 
-    callBtn.style.display = 'none';
-    searchInput.style.display = 'inline-block';
+//     callBtn.style.display = 'none';
+//     searchInput.style.display = 'inline-block';
 
-})
-const searchInputCancel = document.getElementById('fa-times');
+// })
+// const searchInputCancel = document.getElementById('fa-times');
 
-searchInputCancel.addEventListener('click', () => {
-    callBtn.style.display = 'inline-block';
-    searchInput.style.display = 'none';
-    errorMsg.style.display = 'none'
-})
+// searchInputCancel.addEventListener('click', () => {
+//     callBtn.style.display = 'inline-block';
+//     searchInput.style.display = 'none';
+//     errorMsg.style.display = 'none'
+// })
 
 
 
@@ -120,26 +152,24 @@ searchInputCancel.addEventListener('click', () => {
 //     console.log(wholeDocument.length);
 // })
 
-const wholeDocument = document.body.innerText;
-const searchInputValue = document.getElementById('sInputValue');
-const go = document.getElementById('go');
-const errorMsg = document.getElementById('error-msg');
+// const wholeDocument = document.body.innerText;
+// const searchInputValue = document.getElementById('sInputValue');
+// const go = document.getElementById('go');
+// const errorMsg = document.getElementById('error-msg');
 
-go.addEventListener('click', () => {
-    let IV = searchInputValue.value;
-    let regExp = new RegExp(IV, 'gi');
-    const result = wholeDocument.match(regExp);
-    if (result === null) {
-        errorMsg.innerText = ` ' ${IV} ' not in the Document`;
-        errorMsg.style.cssText = `color: red;`;
-     return
-    }
-    
-    errorMsg.innerText = `' ${IV} ' is AVAILABLE! in this page`;
-    errorMsg.style.cssText = `color: green;`;
-    var Wdocs = document.body;
-    var creteNew = new Mark(Wdocs);
-    creteNew.markRegExp(regExp);
-})
+// go.addEventListener('click', () => {
+//     let IV = searchInputValue.value;
+//     let regExp = new RegExp(IV, 'gi');
+//     const result = wholeDocument.match(regExp);
+//     if (result === null) {
+//         errorMsg.innerText = ` ' ${IV} ' not in the Document`;
+//         errorMsg.style.cssText = `color: red;`;
+//      return
+//     }
 
-
+//     errorMsg.innerText = `' ${IV} ' is AVAILABLE! in this page`;
+//     errorMsg.style.cssText = `color: green;`;
+//     var Wdocs = document.body;
+//     var creteNew = new Mark(Wdocs);
+//     creteNew.markRegExp(regExp);
+// })

@@ -8,7 +8,7 @@
      box-sizing: border-box;
      text-decoration: none;
      list-style: none;
-     transition: all .4s;
+     transition: all .3s linear;
 }
 body a{
     text-decoration: none;
@@ -36,11 +36,108 @@ a:hover{
     height: 100%;
     left: 0;
     top: 0;
-    background: rgb(240, 222, 219);
+    background: white;
     transform: all 0.5s ease-out;
     z-index: 1000;
 }
-#laoding-text{
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 100px;
+    height: 100px;
+    /* background-color: rgb(228, 228, 3); */
+    animation: loadingAnimation 1s linear infinite;
+}
+.loader span{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    animation: spanLoading 1s linear infinite;
+}
+.loader span:nth-child(1){
+    top: 0;
+    left: 0;
+    background-color: red;
+}
+.loader span:nth-child(2){
+    top: 0;
+    right: 0;
+    background-color: rgb(208, 255, 0);
+}
+.loader span:nth-child(3){
+    left: 0;
+    bottom: 0;
+    background-color: rgb(7, 219, 7);
+}
+.loader span:nth-child(4){
+    right: 0;
+    bottom: 0;
+    background-color: rgb(56, 242, 255);
+}
+@keyframes loadingAnimation{
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    20%{
+        width: 130px;
+        height: 130px;
+    }
+    40%{
+        width: 150px;
+        height: 150px;
+    }
+    60%{
+        width: 100px;
+        height: 100px;
+    }
+    90%{
+        width: 100px;
+        height: 100px;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+    }
+}
+@keyframes spanLoading{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(45deg);
+    }
+    40%{
+        transform: rotate(90deg);
+    }
+    60%{
+        transform: rotate(90deg);
+    }
+   
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+
+
+/* body animation  */
+/* #body{
+    animation: bodyAnimation 5ms ease-in-out;
+}
+@keyframes bodyAnimation{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+} */
+
+/* #laoding-text{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -98,7 +195,23 @@ a:hover{
         transform: rotate(360deg);
     }
 }
+ */
 
+
+ /* whatsapp button  */
+ .whatsapp-chat{
+    position: fixed;
+    left: 4%;
+    bottom: 4%;
+    z-index: 999;
+}
+.whatsapp-chat i{
+    font-size: 1.5rem;
+    background-color: rgb(29, 179, 9);
+    padding: 10px 10px;
+    border-radius: 100%;
+    color: white;
+}
 
 
 /* utilities */
@@ -132,18 +245,22 @@ a:hover{
     top: 5px;
     padding-left: 4px;
 }
+.btns a:hover{
+    color: black;
+}
 
 /* header 1  */
 .header-iconns i{
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
+    color: white;
 }
 .header1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(39, 33, 33);
-    padding: 10px 18.2rem;
+    padding: 10px 19rem;
     color: white;
 }
 .header1 .right-content{
@@ -154,13 +271,34 @@ a:hover{
     display: flex;
     cursor: pointer;
 }
+.my-account a{
+    color: white;
+}
+.my-account a:hover{
+
+    color: rgb(245, 137, 13);
+}
+.my-account i{
+    color: rgb(245, 137, 13);
+    margin-right: 8px;
+}
+.my-account span{
+    font-size: 14px;
+}
+.account{
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 2px solid white;
+}
+
+
 /* .lang-acco-span .fa-chevron-down{
     color: white;
 }
 .lang-acco-span .fa-chevron-down{
     font-size: 10px;
 } */
-.lang-acco-span i{
+/* .lang-acco-span i{
     color: rgb(245, 137, 13);
     padding:0 4px;
     font-size: 10px;
@@ -170,7 +308,7 @@ a:hover{
 }
 .header-iconns i{
     padding: 0 8px;
-}
+} */
 
 
 
@@ -277,28 +415,39 @@ a:hover{
 }
 
 /* banner  */
-.banner-content{
+.banner-area{
+    margin-top: 5rem;
+    margin-right: 15rem;
+    margin-left: 17rem;
+    margin-bottom: 7rem;
+}
+/* .banner-content{
     position: relative;
     left: 18%;
     bottom: 4vh;
-}
-.shape img{
+} */
+/* .shape img{
     height: 100vh;
     
+} */
+.shape{
+    text-align: center;
 }
 .para{
     font-size: 14px;
-   padding-right: 180px;
+     /* padding-right: 180px; */
 }
 .para p{
     font-family: 'Barlow Semi Condensed', sans-serif;
     opacity: .6;
+    font-size: 15px;
 }
 .banner-content{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .banner-metro button{
     font-size: 11px;
@@ -309,7 +458,7 @@ a:hover{
     background-color: rgb(246 221 193 / 40%); 
 }
 .banner-heading h1{
-    font-size: 32px;
+    font-size: 27px;
     font-weight: 900;
 
 }
@@ -322,10 +471,10 @@ a:hover{
     font-size: 13px;
     font-weight: bold;
     color: rgb(122, 116, 116);
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 .banner-button a i{
-    padding-left: 8px;
+    /* padding-left: 8px; */
     font-size:18px;
     position: relative;
    top: 0.4vh;
@@ -353,7 +502,7 @@ a:hover{
 
 
 /* about  */
-.about-items{
+/* .about-items{
     margin: 4rem 12rem;
     padding: 4.2rem;
 }
@@ -387,7 +536,7 @@ a:hover{
 .yr-para p{
     font-weight: bold;
     font-size: 21px;
-}
+} */
 
 
 /* features  */
@@ -496,7 +645,7 @@ a:hover{
 
     /* pricing */
     .pricing{
-        margin: 3rem 12rem;
+        margin: 5rem 12rem;
         padding:4rem 5.3rem;
     }
     .pricing-title{
@@ -536,9 +685,9 @@ a:hover{
 .qus-title{
     text-align: center;
 }
-.qus-content{
-    margin: 2rem 12rem;
-    padding:0 5rem;
+.question{
+    margin: 4rem 12rem;
+    padding:4rem 5rem;
 }
 .quehead{
     display: flex;
@@ -635,11 +784,11 @@ a:hover{
     }
     .contact{
         margin-left: 12rem;
-        margin-right: 4rem;
-        padding:5rem 4.4rem;
+        margin-right: 5rem;
+        padding:7rem 4.4rem;
     }
     .contact-img img{
-        height: 65vh;
+        height: 80vh;
     }
    .con-button{
        text-align: center;
@@ -651,12 +800,15 @@ a:hover{
        top: 2px;
    }
 .con-button{
-    font-size: 14px;
+    font-size: 15px;
 }
 .contact-button{
     outline: none;
     border: none;
     background-color: transparent;
+    color: white;
+}
+.contact-button a{
     color: white;
 }
 
@@ -679,10 +831,11 @@ a:hover{
 
 /* footer  */
 .footer{
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-top: 3rem;
-    margin-bottom: 10px;
+   /* margin: 10px 10rem; */
+   margin-top: 3rem;
+   margin-bottom: 0;
+   margin-left: 10rem;
+   margin-right: 10rem;
     padding:0 4.3rem;
 }
 .footer-content-box{
@@ -692,6 +845,7 @@ a:hover{
 .footer-row{
     display: grid;
     grid-template-columns: repeat(4, auto);
+    padding: 50px 0;
 }
 .footer-content .logo img{
     max-width: 150px;
@@ -707,7 +861,8 @@ a:hover{
     display: flex;
 }
 .social-icon i{
-    padding: 0 5px;
+    padding: 0 9px;
+    font-size: 18px;
 }
 .footer-box h3{
     font-size: 20px;
@@ -814,9 +969,15 @@ a:hover{
     cursor: pointer;
 }
 
-/* @media  (max-width:1400px){
-
-} */
+@media  (max-width:1300px){
+    .header1{
+        padding: 20px 3rem;
+    }
+    .banner-area{
+       margin-left: 3rem;
+       margin-right: 3rem;
+    }
+}
 
 @media  (max-width:1100px) {
      /* header 1  */
@@ -825,14 +986,21 @@ a:hover{
      }
 
     /* header  */
+    /* .h2-item-box.active{
+        display: none;
+    } */
+
     .h2-right-item{
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         z-index: 10;
         width: 100%;
+        /* height: 100vh; */
         background-color: white;
         left: 32px;
-        top: 8vh;
+        /* top: 4vh; */
+        top: 0;
+        left: 0;
     }
     .h2-item-box{
         display: none;
@@ -868,7 +1036,7 @@ a:hover{
 }
     /* banner  */
     .banner-area{
-        margin-left: 10px;
+      margin: 2rem 1rem;
      }
      .banner-content{
         align-items: center;
@@ -893,7 +1061,10 @@ a:hover{
     /* faetures */
     .features{
         margin: 2rem 1rem;
-        padding: 0;
+        padding-top: 1rem ;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
     }
     .feat-box{
         position: static;
@@ -929,7 +1100,7 @@ a:hover{
     }
 
     /* questin  */
-    .qus-content{
+    .question{
         margin: 1rem;
         padding: 0;
     }
@@ -938,9 +1109,13 @@ a:hover{
         position: static;
     }
     .contact{
-        margin-left: 0;
+        margin: 3rem 0;
+        margin-left: .3rem;
         margin-right: 0;
         padding: 1.5rem 0;
+    }
+    .con-button{
+        margin: 0 40px;
     }
 
     /* partner  */
@@ -955,10 +1130,16 @@ a:hover{
     /* footer  */
     .footer-row{
         grid-template-columns: repeat(2, auto);
+        gap: 1rem;
+    }
+    .footer-content{
+        padding: 0;
+        margin: 0;
     }
     .footer{
-        margin: 2rem 1.5rem;
+        margin: 2rem 1rem;
         padding: 0;
+        box-sizing: border-box;
     }
 
 
@@ -972,7 +1153,19 @@ a:hover{
 }
 
 
-@media(max-width:750px){
+@media(max-width:800px){
+
+    /* header1`  */
+    .h2-right-item{
+        top: 0;
+    }
+    .h2-navbar{
+        position: sticky;
+        top: 0;
+    }
+    .header1{
+        justify-content: center;
+    }
     /* service  */
     .service-content{
         grid-template-columns: auto;
@@ -987,14 +1180,30 @@ a:hover{
     }
 
     /* footer  */
+    .footer-content-box{
+        margin: 0;
+        padding: 0;
+    }
     .footer-row{
         grid-template-columns: auto;
     }
+    .footer{
+        /* margin: 10px 10rem; */
+        margin-top: 2rem;
+        margin-bottom: 0;
+        margin-left: 5px;
+        margin-right: 3px;
+         padding:0;
+     }
 
 }
 
 @media (max-width:500px){
     /* header1 */
+    .h2-right-item{
+        top: 0;
+        left: 0;
+    }
     .language-down{
         margin-left: 25px;
     }
@@ -1008,12 +1217,31 @@ a:hover{
     .about-heading h1{
         font-size: 26px;
     }
+
 }
-@media(max-width: 350px){
+@media (max-width:600px){
+    .contact-item input{
+        width: 90vw;
+        padding-top: 10px ;
+        padding-bottom: 10px ;
+        padding-left: 8px ;
+        padding-top: 10px ;
+        overflow: hidden;
+    }
+}
+@media(max-width: 370px){
+    .h2-right-item{
+        top: 0;
+    }
     .header2-text {
         margin-right: 33px;
      }
      .banner-heading h1{
         font-size: 26px;
+    }
+}
+@media(max-width: 240px){
+    .h2-right-item{
+        top: 0;
     }
 }

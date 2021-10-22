@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>logibook</title>
 
+    <!-- aos librery  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
     <!-- custom css  -->
     <link rel="stylesheet" href="style.css">
 
@@ -30,30 +34,55 @@
     <!-- <script src="vendor/mark.js/dist/mark.min.js" charset="UTF-8"></script> -->
 </head>
 
-<body onload="PageLoaded()">
+<body onload="PageLoaded()" id="body">
+
+    <div class="whatsapp-chat">
+        <a href="https://wa.me/911234567890"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
     <!-- preloader  -->
     <div id="pre-loader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- <div id="pre-loader">
         <div id="laoding-text">Loading...</div>
         <div class="circle-loading"></div>
-    </div>
+    </div> -->
 
 
     <!-- header 1  -->
-    <header class="header1">
+    <header class="header1" id="header1">
         <div class="header-iconns left-content">
-            <i class="fab fa-facebook"></i>
+        <!-- <i class="fab fa-facebook"></i>
             <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-twitter-square"></i> -->
+        <!-- <a href="https://wa.me/911234567890"> -->
+        <!-- <i class="fab fa-whatsapp"></i> -->
+        <!-- </a> -->
         </div>
 
         <div class="right-content">
             <div class="my-account">
                 <div class="account">
-                    <span class="lang-acco-span"><i class="far fa-user"></i><select name="loginMenu" id="loginMenu">
-                            <option value="MyAccount">My account</option>
-                            <option value="Login">Log In</option>
-                            <option value="Signup">Sign Up</option>
-                        </select></span>
+                    <a href="login.php">
+                        <i class="far fa-user"></i><span> Log In</span>
+                    </a>
+                    <!-- <span class="lang-acco-span"><i class="far fa-user"></i>
+                        <select name="loginMenu" id="loginMenu" onchange="location = this.value;">
+                            <option value="#home">My account</option>
+                            <option value="Login.php">Log In</option>
+                            <option value="trial.php">Start a Free Trial</option>
+                        </select></span> -->
+                </div>
+                <div class="free-trial_header1">
+                    <a href="startTrial.php">
+                        <i class="fas fa-user-plus"></i><span> Start Free Trial</span>
+                    </a>
                 </div>
 
 
@@ -63,6 +92,7 @@
                 </div> -->
 
             </div>
+        </div>
     </header>
 
     <div class="header2">
@@ -79,18 +109,21 @@
             </div>
             <div class="bars">
                 <div class="bar-item">
-                    <div class="right-bars" id="right-bars1" onclick="openNav()"><i class="fas fa-bars"></i></div>
-                    <div class="left-bars" id="left-bar-2" onclick="closeNav()">
+                    <div class="right-bars" id="right-bars1" onclick="openNav()"><i class="fas fa-bars" id="faBars"></i></div>
+                    <!-- <div class="left-bars" id="left-bar-2" onclick="closeNav()">
                         <i class="fas fa-times"></i>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="h2-item-box" id="h2-item-box">
                 <div class="h2-right-item" id="h2-right-item">
                     <div class="right-content">
                         <div class="right-nav">
+                            <div class="left-bars bar-item" id="left-bar-2" onclick="closeNav()">
+                                <i class="fas fa-times"></i>
+                            </div>
                             <div class="right-nav-item active">
-                                <a href="#home">Home</a>
+                                <a href="#header1">Home</a>
                             </div>
                             <div class="right-nav-item">
                                 <a href="#features">Features</a>
@@ -108,16 +141,17 @@
                     </div>
                     <div class="search">
                         <span class="search-box">
-                            <i class="fas fa-search" id="fa-search"></i>
+                            <!-- <i class="fas fa-search" id="fa-search"></i>
                             <div id="searchInput"><input type="text" id="sInputValue"><span id="go"> Search
                                 </span><span>
                                     <i class="fas fa-times" id="fa-times"></i></span>
-                            </div>
+                            </div> -->
                             <button class="btns searchbtn" id="searchbtn">
-                                <a href="tel:+1-(514)-312-5678"> <i class="fas fa-phone-alt"></i> +1 (514)312-5678</a>
+                                <a href="tel:+1-(514)-312-5678"> <i class="fas fa-phone-alt"></i> +1
+                                    (514)312-5678</a>
                             </button>
                         </span>
-                        <div id="error-msg"></div>
+                        <!-- <div id="error-msg"></div> -->
                     </div>
                 </div>
             </div>
@@ -127,21 +161,23 @@
 
     <!-- banner  -->
     <section class="banner-area" id="home">
-        <div class="d-table container-fluid">
+        <div class="d-table container">
             <div class="row">
-                <div class="banner-content col-lg-5 col-md-12 col-sm-12">
+                <div class="banner-content col-lg-6 col-md-12 col-sm-12">
                     <div class="banner-metro">
                         <button>A shubh welcome to Logibook! :-}</button>
                     </div>
                     <div class="banner-tag">
                         <p><i>Aapka apna digital khata!</i></p>
                     </div>
-                    <div class="banner-heading mt-4 mb-3">
-                        <h1>Logibook streamlines genuine quality ERP services for the convenience of your company's road
+                    <div class="banner-heading mt-2 mb-3">
+                        <h1 class="text-center">Logibook streamlines genuine quality ERP services for the convenience of
+                            your company's road
                             transport management services.</h1>
                     </div>
                     <div class="para mb-3">
-                        <p>Logibook makes bookings, operations, tracking and monitoring of goods convenient, that are to
+                        <p class="text-center">Logibook makes bookings, operations, tracking and monitoring of goods
+                            convenient, that are to
                             be delivered in real time. The platform helps operators in taking decisions by providing
                             accurate data and generating reports on revenue while providing real life communication
                             updates.
@@ -149,8 +185,8 @@
                     </div>
                     <div class="button mt-2 mb-3">
                         <button class="btns banner-button">
-                            <a href="#">
-                                Request a quotes <i class="fas fa-caret-right"></i>
+                            <a href="#contact">
+                                Request a Quote <i class="fas fa-caret-right"></i>
                             </a>
                         </button>
                         <!-- <button class="btns banner-button">
@@ -164,16 +200,17 @@
                         </button> -->
                     </div>
                 </div>
-                <div class="shape col-lg-7 col-md-12 col-sm-12">
+                <div class="shape col-lg-6 col-md-12 col-sm-12">
                     <!-- <img src="img/truck-nawpic-3.jpg" class="img-fluid"> -->
-                    <img src="img/aaaa.jpg" alt="" class="img-fluid">
+                    <!-- <img src="img/aaaa.jpg" alt="" class="img-fluid"> -->
+                    <img src="img/44818097-vector-delivery-car-flat-illustration.jpg" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- about us  -->
-    <section class="about pb-1">
+    <!-- <section class="about pb-1">
         <div class="about-items">
             <div class="container">
                 <div class="row">
@@ -204,7 +241,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- features  -->
     <section class="features" id="features">
@@ -253,7 +290,7 @@
                     <div class="feat-left-img">
                         <div class="del-c">
                             <img src="img/choose-img.jpg" alt="" class="img-fluid">
-                            <i class="fas fa-play-circle"></i>
+                            <!-- <i class="fas fa-play-circle"></i> -->
                         </div>
                     </div>
                 </div>
@@ -279,13 +316,13 @@
                                 Transparent Pricing
                             </a>
                         </h3>
-                        <p>With our fare calculator, we instantaneously give you the best possible rates online...</p>
+                        <p>With our fare calculator, we instantaneously give you the best possible rates online</p>
 
-                        <button class="service-btn">
+                        <!-- <button class="service-btn">
                             <a href="/blog.html">
                                 Read more <span><i class="fas fa-plus-circle"></i></span>
                             </a>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="request-box">
@@ -299,12 +336,12 @@
                             </a>
                         </h3>
                         <p>Get real time updates of your goods with our simplified technology. Automatic balance
-                            updates...</p>
-                        <button class="service-btn">
+                            updates</p>
+                        <!-- <button class="service-btn">
                             <a href="/blog.html">
                                 Read more <span><i class="fas fa-plus-circle"></i></span>
                             </a>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="request-box">
@@ -317,13 +354,13 @@
                                 Quick and Easy Portal
                             </a>
                         </h3>
-                        <p>Our ERP software is very simple to use, giving instant results. No complications at all....
+                        <p>Our ERP software is very simple to use, giving instant results. No complications at all
                         </p>
-                        <button class="service-btn">
+                        <!-- <button class="service-btn">
                             <a href="/blog.html">
                                 Read more <span><i class="fas fa-plus-circle"></i></span>
                             </a>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="request-box">
@@ -337,12 +374,12 @@
                             </a>
                         </h3>
                         <p>Make Bilty and Trip invoices in 30 seconds. Access POD status and ledger.Payments are
-                            instant...</p>
-                        <button class="service-btn m-0">
+                            instant</p>
+                        <!-- <button class="service-btn m-0">
                             <a href="/blog.html">
                                 Read more <span><i class="fas fa-plus-circle"></i></span>
                             </a>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
@@ -353,7 +390,7 @@
     <section class="pricing" id="pricing">
         <div class="pricing-container">
             <div class="pricing-title pb-4">
-                <span class="all-sma-heading">Best performance</span>
+                <!-- <span class="all-sma-heading">Best performance</span> -->
                 <h2 class="mt-3 mb-4 all-lar-heading">Choose your perfect plan</h2>
             </div>
             <div class="container">
@@ -469,10 +506,10 @@
     </section>
 
     <!-- asked question  -->
-    <section class="question pb-5 pt-5" id="faq">
+    <section class="question" id="faq">
         <div class="qus-content">
             <div class="qus-title pb-4">
-                <span class="all-sma-heading">queries resolved</span>
+                <!-- <span class="all-sma-heading">queries resolved</span> -->
                 <h2 class="mt-3 mb-4 all-lar-heading">We bring clarity to your inquiry</h2>
             </div>
             <div class="container">
@@ -618,23 +655,23 @@
 
     <!-- contact  -->
     <section class="contact" id="contact">
-        <div class="cotact-us container">
+        <div class="cotact-us container" data-aos="fade-down">
             <div class="row">
-                <div class="contact-left-para col-lg-6 col-md-12 col-sm-12">
+                <div class="contact-left-para col-lg-6 col-md-12 col-sm-12" >
                     <div class="contact-img">
                         <img src="img/1.jpg" class="img-fluid">
                     </div>
                 </div>
-                <div class="contact-right-para col-lg-6 col-md-12 col-sm-12">
+                <div class="contact-right-para col-lg-6 col-md-12 col-sm-12" data-aos="fade-down">
                     <div class="header-items">
-                        <span class="all-sma-heading">Request a quote</span>
+                        <!-- <span class="all-sma-heading">Request a quote</span> -->
                         <h2 class="mt-3 mb-4 all-lar-heading">Contact Us</h2>
                     </div>
                     <form action="action.php">
                         <div class="row contact-w-box">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="row">
-                                    <div class="col-lg-6 col-sm-12 col-md-6">
+                                    <div class="col-lg-12 col-sm-12 col-md-6">
                                         <div class="contact-item">
                                             <p class="m-0">Your Name</p>
                                             <input type="text" required>
@@ -657,7 +694,7 @@
                                             <input type="text" required>
                                         </div> -->
                                     </div>
-                                    <div class="col-lg-6 col-sm-12 col-md-6">
+                                    <div class="col-lg-12 col-sm-12 col-md-6">
                                         <div class="contact-item">
                                             <p class="m-0">Email address</p>
                                             <input type="Email" required>
@@ -715,11 +752,13 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <div class="con-button">
-                                <a href="###">
-                                    <p class="btns con-button m-0">
-                                        <button class="contact-button" type="submit">
-                                            Request a quotes <i class="fas fa-caret-right"></i>
+                            <div class="con-button text-center">
+                                <a href="###" class="text-center">
+                                    <p class="btns con-button m-0 text-center">
+                                        <button class="contact-button btn text-center" type="submit">
+                                            <a href="quote.php" class="text-center">
+                                                Request a Quote <i class="fas fa-caret-right"></i>
+                                            </a>
                                         </button>
                                     </p>
                                 </a>
@@ -764,7 +803,7 @@
                                 all
                                 your transport logistics needs. Feel free to correspond with us!</p>
                             <div class="social-icon">
-                                <div>
+                                <!-- <div>
                                     <a href="https://www.facebook.com/" target="_blank">
                                         <i class="fab fa-facebook"></i>
                                     </a>
@@ -773,10 +812,11 @@
                                     <a href="https://www.instagram.com/" target="_blank">
                                         <i class="fab fa-instagram-square"></i>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="fab fa-twitter-square"></i>
+                                    <a href="https://wa.me/911234567890">
+                                        <!-- <i class="fab fa-twitter-square"></i> -->
+                                        <!-- <i class="fab fa-whatsapp"></i> -->
                                     </a>
                                 </div>
                             </div>
@@ -789,17 +829,21 @@
                                 <div class="div-addr">
                                     <span class="addr1"><i class="fas fa-map-marker-alt"></i></span>
                                     <span class="addre-span"> Address:</span>
-                                    <a href="#"> 2976 Sunrise road las vegas, NV 89108</a>
+                                    2976 Sunrise road las vegas, NV 89108
                                 </div>
                                 <div class="div-addr">
                                     <span class="addr1"><i class="fas fa-phone-alt"></i></span>
                                     <span class="addre-span">Phone:</span>
-                                    <a href="tel:+1-(514)-312-5678">+1 (514) 312-5678</a>
+                                    <a href="tel:+1-(514)-312-5678">
+                                        +1 (514) 312-5678
+                                    </a>
                                 </div>
                                 <div class="div-addr">
                                     <span class="addr1"><i class="fas fa-envelope"></i></span>
                                     <span class="addre-span">Email:</span>
-                                    <a href="mailto:xyz@gmail.com"><span class="mail-box">xyz@gmail.com</span></a>
+                                    <a href="mailto:xyz@gmail.com">
+                                        <span class="mail-box">xyz@gmail.com</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -815,7 +859,7 @@
                                     <a href="/privacyPolicy.html">Privacy Policy</a>
                                 </div>
                                 <div class="f-link-item">
-                                    <a href="#home">Request A Quote</a>
+                                    <a href="#contact">Request A Quote</a>
                                 </div>
                                 <div class="f-link-item">
                                     <a href="#faq">FAQ</a>
@@ -851,10 +895,18 @@
     </footer>
 
     <div id="scrollBtn">
-        <a href="#home"><span><i class="fas fa-arrow-circle-up"></i></span></a>
+        <a href="#header1"><span><i class="fas fa-arrow-circle-up"></i></span></a>
     </div>
 
     <!-- <script src="vendor/mark.js/dist/mark.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 2000
+        });
+    </script>
     <script src="script.js"></script>
 
 </body>
